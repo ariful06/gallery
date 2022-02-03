@@ -9,7 +9,7 @@ class PhotoInitialState extends PhotoState {}
 
 class PhotosLoadedState extends PhotoState {
 
-  final List<Photos>? photos;
+  final List<ImageDTO>? photos;
   final int? currentPage;
 
   PhotosLoadedState({this.photos,this.currentPage});

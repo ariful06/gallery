@@ -11,11 +11,11 @@ class PhotoCubit extends Cubit<PhotoState> {
 
   final PhotoService? service;
 
-  Future<List<Photos>?> fetchPost(int page,int limit) async {
+  Future<List<ImageDTO>?> fetchPost(int page,int limit) async {
     try {
 
       emit(PhotoInitialState());
-      List<Photos>? photos = await service?.fetchPhotos(page, limit);
+      List<ImageDTO>? photos = await service?.fetchPhotos(page, limit);
       Log.d(photos.toString());
       if(photos != null && photos.isNotEmpty){
         emit(PhotosLoadedState(photos: photos,currentPage: page));

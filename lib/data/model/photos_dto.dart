@@ -1,6 +1,6 @@
 
 
-class Photos {
+class ImageDTO {
   String? id;
   String? author;
   int? width;
@@ -8,7 +8,7 @@ class Photos {
   String? url;
   String? downloadUrl;
 
-  Photos(
+  ImageDTO(
       {this.id,
         this.author,
         this.width,
@@ -16,7 +16,7 @@ class Photos {
         this.url,
         this.downloadUrl});
 
-  Photos.fromJson(Map<String, dynamic> json) {
+  ImageDTO.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     author = json['author'];
     width = json['width'];

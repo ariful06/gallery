@@ -10,9 +10,9 @@ class PhotoRepository {
 
   PhotoRepository({this.photoService});
 
-  Future<List<Photos>?> fetchPhotos(int page,int limit) async {
+  Future<List<ImageDTO>?> fetchPhotos(int page,int limit) async {
     final response = await photoService?.getApiClient()?.getFutureResponse(AllUrl.getPhotosUrlByPageAndLimit(page, limit));
-    List<Photos> data = response?.data.map((e)=> Photos.fromJson(response.data)).toList();
+    List<ImageDTO> data = response?.data.map((e)=> ImageDTO.fromJson(response.data)).toList();
     return [];
   }
 }
