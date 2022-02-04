@@ -29,6 +29,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: ^0.13.3
+  flutter_bloc: ^7.0.1
+  dio:
+  google_fonts: 2.2.0
+  cached_network_image:
+  fluro: ^2.0.0
+  logger: ^1.0.0-nullsafety.0
+  preferences: ^5.2.1
+  equatable: 1.2.0
+  infinite_scroll_pagination: ^3.1.0
+  photo_view: ^0.13.0
+
 
 
   # The following adds the Cupertino Icons font to your application.
