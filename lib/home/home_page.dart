@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
         key: const PageStorageKey<String>('scrollPosition'),
         controller: _scrollController,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4,
+            crossAxisCount: 3,
             crossAxisSpacing: 10,
             mainAxisSpacing: 10),
         itemCount: photos.length,
