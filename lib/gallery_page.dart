@@ -14,8 +14,7 @@ class GalleryApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocProvider(
-          create: (BuildContext context) =>
-              PhotoCubit(service: photoService)..fetchPost(1, pageLimit),
+          create: (BuildContext context) => PhotoCubit(service: photoService)..fetchPost(1, pageLimit),
           child: HomePage()),
     );
   }

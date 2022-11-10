@@ -13,13 +13,13 @@ import 'package:gallery/utils/page_constant.dart';
 
 PhotoService? _photoService;
 ApiClient? _apiClient;
-PhotoRepository? repository;
+// PhotoRepository? repository;
 
 
 void _init(BuildContext context) {
   _apiClient = AppProvider?.getApplication(context)?.getApiClient();
   _photoService = PhotoService(_apiClient);
-  repository = PhotoRepository(photoService: _photoService);
+  // repository = PhotoRepository(photoService: _photoService);
 }
 class AppRoutes {
 
