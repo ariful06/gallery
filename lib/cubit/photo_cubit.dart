@@ -27,4 +27,5 @@ class PhotoCubit extends Cubit<PhotoState> {
       emit(PhotoErrorState(message: e.toString()));
     }
   }
+
 }
