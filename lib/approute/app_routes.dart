@@ -3,10 +3,9 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:gallery/api/api_client.dart';
 import 'package:gallery/core/app_provider.dart';
-import 'package:gallery/data/photo_repository.dart';
+import 'package:gallery/features/home/presentation/details/details_page.dart';
 import 'package:gallery/gallery_page.dart';
-import 'package:gallery/home/details/details_page.dart';
-import 'package:gallery/home/home_page.dart';
+import 'package:gallery/features/home/presentation/home_page.dart';
 import 'package:gallery/service/photo_service.dart';
 import 'package:gallery/utils/page_constant.dart';
 

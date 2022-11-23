@@ -6,19 +6,18 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gallery/core/app_provider.dart';
-import 'package:gallery/cubit/photo_cubit.dart';
-import 'package:gallery/cubit/photo_state.dart';
-import 'package:gallery/data/model/photos_dto.dart';
+import 'package:gallery/features/home/domain/entity/photo.dart';
+import 'package:gallery/features/home/presentation/cubit/photo_cubit.dart';
+import 'package:gallery/features/home/presentation/cubit/photo_state.dart';
+import 'package:gallery/features/home/presentation/details/details_page.dart';
 import 'package:gallery/logger/Log.dart';
 import 'package:gallery/utils/page_constant.dart';
 import 'package:gallery/values/app_colors.dart';
 import 'package:gallery/values/font_styles.dart';
 
-import 'details/details_page.dart';
-
 class HomePage extends StatefulWidget {
   static const String PATH ='/';
-   HomePage({Key? key}) : super(key: key);
+   const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -27,7 +26,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentPage = 0;
   bool isLoading = false;
-  List<ImageDTO> photos = <ImageDTO>[];
+  List<Photo> photos = <Photo>[];
   final ScrollController _scrollController = ScrollController();
   PhotoCubit? _bloc;
   @override

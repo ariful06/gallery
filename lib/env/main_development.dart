@@ -4,8 +4,11 @@ import 'package:gallery/api/base_urls.dart';
 import 'package:gallery/approute/app_routes.dart';
 import 'package:gallery/core/app.dart';
 import 'package:gallery/core/env.dart';
+import 'package:gallery/features/di/injection_container.dart' as di;
+
 
 Future<void> main() async {
+  await di.init();
   Development(App());
 }
 
